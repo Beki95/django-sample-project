@@ -11,7 +11,7 @@
 
     ```sh
     git clone https://github.com/Beki95/django-sample-project.git
-    cd DjangoSampleProject
+    cd django-sample-project
     ```
 
 2. **Make the start script executable**

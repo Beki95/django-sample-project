@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 CONTAINER_NAME="app"
+POSTGRES_NAME="postgres-db"
 
 
 run() {
@@ -25,8 +26,8 @@ start() {
 
 stop() {
     echo "Stopping and removing Docker container..."
-    docker stop $CONTAINER_NAME
-    docker rm $CONTAINER_NAME
+    docker stop $CONTAINER_NAME $POSTGRES_NAME
+    docker rm $CONTAINER_NAME $POSTGRES_NAME
 }
 
 usage() {
@@ -46,6 +47,8 @@ case "$1" in
         generate-env;;
     start)
         start;;
+    stop)
+        stop;;
     *)
         usage
         exit 1
